@@ -27,7 +27,7 @@ jobs:
       - name: Copy files excluding .github/workflows/push.yml
         run: |
           cd repo-to-push
-          rsync -av --exclude='.github/workflows/push.yml' ../* ./
+          rsync -av --exclude='/.github/workflows/push.yml' ../* ./
         
       - name: Commit and push changes
         run: |
